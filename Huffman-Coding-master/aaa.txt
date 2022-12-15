@@ -1,0 +1,152 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Putirf 
+e-hengirmen
+/
+Huffman-Coding
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+e-hengirmen/Huffman-Coding
+ 4 branches
+ 0 tags
+Latest commit
+@e-hengirmen
+e-hengirmen fixed progress bar
+…
+ 1
+99dca48
+on Mar 30, 2021
+Git stats
+ 123 commits
+Files
+Type
+Name
+Latest commit message
+Commit time
+images
+added images folder
+2 years ago
+.gitignore
+divided progress bar into its own file
+2 years ago
+Compressor.cpp
+divided progress bar into its own file
+2 years ago
+Decompressor.cpp
+fixed progress bar
+2 years ago
+LICENSE
+added MIT licens
+2 years ago
+Makefile
+Added Makefile
+2 years ago
+README.md
+Update Readme.md
+2 years ago
+progress_bar.hpp
+fixed progress bar
+2 years ago
+README.md
+
+
+Huffman Coding
+MIT License linkedin open issues closed issues
+
+Self-made C++ file archiver and archive extractor programs based on Huffman's lossless compression algorithm
+
+Table of Contents
+How does it work
+Compressor
+Decompressor
+How to use it?
+Versions
+How does it work?
+You can check out documentation inside Compressor.cpp and Decompressor.cpp files to help you understand Huffman's algorithm's inner workings.
+
+Compressor:
+The Compressor is a 2-pass program. What I mean by this is that the Compressor reads input files twice.
+
+In the first pass, the program counts usage frequency of every unique byte and creates a weighted translation tree for every used unique byte inversely proportional to its usage frequency and then writes this transformation info to the compressed file for decompression purposes
+
+In the second pass, the program translates input files according to the translation tree and writes it to the newly created compressed file
+
+Decompressor:
+The Decompressor is a 1-pass program: The Decompressor first reads translation info and creates a binary tree from it. After this process is done, it uses this binary translation tree to decode the rest of the file
+
+How to use it?
+Compile with make using your favourate shell:
+make all
+After running make, you can use archive command below to compress the file you want:
+To compress one file use:
+./archive {{filename}}
+To compress multiple files use:
+./archive {{filename1}} {{filename2}} ...
+And to decompress a compressed file, use the extract command below:
+./extract {{filename}}
+Versions
+Version 2.0(Latest Version)
+Can compress any file and folder you want
+Useful for educative purposes
+Uses more functionalized structure
+Version 1.0
+Compresses multiple files
+Version 1.0 can not be used to compress folders
+Version 0.9
+Compresses 1 file at a time
+Version 0.9 can not be used to compress folders
+Easier to understand
+Useful for educative purposes
+About
+A C++ compression program based on Huffman's lossless compression algorithm and decoder.
+
+Topics
+compression cpp huffman decompression huffman-coding huffman-algorithm huffman-tree compression-algorithm huffman-compression-algorithm lossless-compression-algorithm compression-implementations decompressor huffman-coding-algorithm huffman-compressor huffman-encoder decompression-implementations huffman-decoder huffman-compression lossless-data-compression huffman-encoder-decoder
+Resources
+ Readme
+License
+ MIT license
+Stars
+ 76 stars
+Watchers
+ 4 watching
+Forks
+ 10 forks
+Releases
+No releases published
+Packages
+No packages published
+Languages
+C++
+99.4%
+ 
+Makefile
+0.6%
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Copied!
+
